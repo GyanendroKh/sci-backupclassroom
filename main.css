@@ -15,31 +15,53 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-#content {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 220px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  transition: all ease-in-out 0.2s;
 }
 
 #logo {
-  width: 280px;
+  width: 100%;
 }
 
 #button {
-  margin-top: 20px;
-  width: 270px;
+  margin-top: 18px;
+  width: calc(100% - 10px);
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px 5px;
   background-color: red;
   cursor: pointer;
-  font-size: larger;
+  font-size: large;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
+  transition: all ease-in-out 0.2s;
+}
+
+@media only screen and (max-width: 290px) {
+  #content {
+    width: 210px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  #content {
+    width: 300px;
+  }
+
+  #button {
+    margin-top: 22px;
+  }
 }
